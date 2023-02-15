@@ -1,0 +1,582 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    color: #ffffff;
+}
+
+    /* ***************** From Here the Header Part Started *************** */
+
+header {
+    padding: 30px 0px;
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo {
+    margin-right: 50px;
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 25.5px;
+}
+
+header nav ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+
+header nav ul li {
+    font-size: 14px;
+    font-weight: 700;
+}
+
+header nav ul li button {
+    background-color: #1e1e21;
+    padding: 10px 40px;
+    font-size: 14px;
+    border-radius: 10px ;
+    font-weight: 300;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+    /*  ---------------Here the Header Part Ends ----------- */
+
+body {
+    margin:  0 15vw;
+    display: flex;
+    flex-direction: column;
+    background: #0f0f10;
+}
+
+    /* ************* From here the Main part Started ************* */
+
+    /*  ************* From here the On ear part started ********** */
+.onear {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.main_img img {
+    width: 230px;
+    height: 540px;
+    position: absolute;
+    top: -117px;
+    left: 248px;
+}
+
+.onear-description {
+    margin-left: 325px;
+}
+.onear-description img[alt=OnEar] {
+        position: relative;
+        right: -50px;
+        height: 70px;
+}
+
+.onear-description h1 {
+    font-size: 46px;
+    font-weight: 600;
+    margin-bottom: 26px;
+}
+
+.onear-description h3 {
+    font-size: 16px;
+    font-weight: 450;
+    margin-bottom: 27px;
+}
+
+.onear-description p {
+    color: #bdc0c2;
+    font-size: 12px;
+    font-weight: 300;
+    line-height: 25px;
+}
+
+.onear-btn {
+    display: flex;
+    padding: 10px 25px;
+    background-color: #1e1e21;;
+    gap: 20px;
+    margin-top: 23px;
+    border-radius: 8px;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+}
+
+.onear-btn img {
+    width: 15px;
+    height: 17px;
+    background-color: transparent;
+}
+
+.onear-btn p {
+    font-size: 12px;
+    font-weight: 300;
+    color: white;
+}
+
+p {
+    background-color: transparent;
+}
+
+.onear-btn h4 {
+    background-color: transparent;
+    font-weight: 400;
+}
+
+    /*  --------- Here the On ear part ends --------- */
+
+    /* ********** From here the Navigation parts starts which include(apple, spotify etc) ******** */
+
+.nav-img {
+    margin-top: 78px;
+}
+
+.nav-img ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 98px;
+}
+
+.nav-img ul li img {
+        width: 80px;
+        cursor: pointer;
+}
+
+    /* ------- Here the the Navigation parts of img ends -------- */
+
+    /* ************* From Here the Specification of Product parts starts *********** */
+.specs {
+    margin-top: 95px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.specs img[alt=Specs] {
+    width: 168px;
+}
+
+.specs .specification {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 23px;
+    gap: 80px;
+}
+
+.specification .spec-holder {
+    width: 25%;
+}
+
+.spec-holder h3 {
+        font-size: 12px;
+        font-weight: 350;
+        line-height: 26px;
+}
+
+.spec-holder p {
+    font-size: 10px;
+    font-weight: 350;
+    color: #bdc0c2;
+}
+
+.spec-holder {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+}
+
+.spec-holder div img {
+    width: 12px;
+    height: 19.3px;
+}
+
+.spec-holder div img[alt=Battery] {
+    width: 20px;
+}
+
+.specification div img[alt=Headphone_Specification] {
+    width: 235px;
+    height: 292px;
+}
+
+.spec-holder div:nth-child(2) {
+    position: relative;
+    left: -30px;
+}
+
+.spec-holder div:nth-child(3) {
+    position: relative;
+    left: -30px;
+}
+
+    /* -------- Here the Specification of Products part ends ----------- */
+
+    /* ************** From here the Case parts starts  ********* */
+
+.case {
+    display: flex;
+    flex-direction: column;
+    margin-top: 90px;
+    justify-content: center;
+    align-items: center;
+}
+
+.case img[alt=Case] {
+    width: 146px;
+}
+
+.case .case-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 60px;
+    gap: 58px;
+}
+
+.case-container div img[alt=case-img] {
+    width: 238px;
+}
+
+.case-info p {
+        color: #bdc0c2;
+        font-size: 12px;
+        line-height: 25px;
+}
+
+.case-info div {
+    display: flex;
+    margin-top: 20px;
+    background-color: #1e1e21;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 22px;
+    gap: 22px;
+    border-radius: 10px;
+    width: fit-content;
+}
+
+.case-info div img {
+    background-color: transparent;
+    width: 19px;
+}
+
+.case-info div p {
+    font-size: 12px;
+    color: white;
+}
+
+    /* --------------- Here the Case part ends ---------- */
+
+    /* ************* From Here the 40% off Purchase section starts ***********   */
+
+.purchase {
+    display: flex;
+    background-color: #181a1b;
+    margin-top: 100px;
+    align-items: center;
+    justify-content: center;
+    padding-top: 40px;
+    padding-bottom: 35px;
+    border-radius: 12px;
+    gap: 67px;
+}
+
+.purchase div {
+    background-color: #181a1b;
+}
+
+.purchase div h1 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 16px;
+}
+
+.purchase div p {
+    font-size: 14px;
+    color: #bdc0c2;
+}
+
+.purchase .purchase-btn {
+    display: flex;
+    margin-top: 14px;
+    background: #000000;
+    padding: 12px 21px;
+    width: fit-content;
+    border-radius: 8px;
+    gap: 12px;
+    align-items: center;
+}
+
+.purchase-btn img {
+    width: 16px;
+    height: 17px;
+}
+
+.purchase-btn h4 {
+    font-size: 12px;
+    font-weight: 400;
+}
+
+/* -------------- Here the 40% off Purchase section Ends --------- */
+
+/* *********** From here the choice Section starts ********** */
+
+.choice {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 73px
+}
+
+.choice div img[alt=Choose_your_style] {
+    width: 155px;
+}
+
+.choice .choice-selection {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    justify-content: center;
+    width: 38%;
+    align-items: center;
+    gap: 50px;
+    margin-top: 65px;
+    position: relative;
+    left: -50px;
+}
+
+.product {
+    height: 65px;
+}
+
+.multi-choice .product img {
+        width: 75px;
+        height: 100px;
+        position: relative;
+        left: 25px;
+        top: -40px;
+}
+
+.choice-selection .multi-choice {
+    background-color: #181a1b;
+    display: flex;
+    flex-direction: column;
+    border-radius: 8px;
+}
+
+.price {
+    display: flex;
+    padding: 15px;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.price div img {
+    width: 23px;
+    background-color: black;   
+    padding: 7px 5px;
+    border-radius: 7px;
+}
+
+.price div h1 {
+        font-size: 12px;
+        font-weight: 400;
+}
+
+.price div p {
+    font-size: 12px;
+}
+
+.bag {
+    display: flex;
+    align-items: flex-end;
+}
+
+    /* --------- Here the choice Section Ends ---------- */
+
+    /* ************ From Here the Footer section starts ************ */
+
+footer {
+    display: flex;
+    gap: 102px;
+    margin: 100px 0px;
+}
+
+footer div img[alt=BeatsLogo] {
+    width: 26px;
+    margin-left: 5px;
+}
+
+footer div ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 80px;
+}
+
+footer div ul li:first-child {
+    margin-bottom: 10px;
+}
+
+footer div ul li a {
+    font-size: 12px;
+    font-weight: 300;
+    color: #BDC0C2;
+}
+
+footer div ul li:first-child a {
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: normal;
+    color: white;
+}
+
+#subscribe {
+    display: flex;
+    flex-direction: column;
+    gap: 33px;
+}
+
+footer #subscribe nav ol {
+    display: flex;
+    gap: 20px;
+}
+
+footer #subscribe nav ol img {
+    width: 26px;
+}
+
+#subscribe .sub-btn {
+    background-color: #181A1B;
+    display: flex;
+    padding: 0px 10px;
+    border-radius: 8px;
+}
+
+.sub-btn input {
+    background-color: transparent;
+    border-color: transparent;
+}
+
+.sub-btn div {
+    background-color: #0A0A0B;
+    display: flex;
+    align-items: center;
+    padding: 10px 21px;
+    border-radius: 8px;
+    gap: 22px;
+    margin: 5px 0px;
+}
+
+.sub-btn div img {
+    width: 15px;
+}
+
+.sub-btn div p {
+    font-size: 12px;
+    background: #0f0f10;
+}
+
+footer div img[alt=upArrow] {
+    width: 29px;
+    margin-left: 22px;
+    margin-top: 5px;
+}
+
+    /* ------------ Here the Footer Section Ends ----------- */
+
+    /* *********** Here some Extra Things like Hover ********** */
+
+    header nav ul li button:hover,  .onear-btn:hover, .case-info div:hover, .purchase-btn:hover, .multi-choice:hover, .sub-btn div:hover, .visit:hover {
+        border: 2px solid white;
+        cursor: pointer;
+    }
+
+    a:hover {
+        color: red;
+    }
+
+    li:hover{
+        color: #0867f6;
+    }
+
+    .subscription-done {
+        display: none;
+        position: fixed;
+        left: 0;
+        border: 2px solid red;
+        bottom: 0px;
+        height: 100vh;
+        width: 100%;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+        background: linear-gradient( rgba(0, 0, 0, 0.416), rgba(0, 0, 0, 0.416) );
+    }
+
+    .popup h1 {
+        font-size: 20px;
+    }
+
+    .popup p {
+        margin: 10px 0px;
+        font-weight: 800;
+        color: #5bb556;
+    } 
+
+    .popup {
+        width: fit-content;
+        border: 1px solid white;
+        background-color: #181a1b;
+        border-radius: 15px;
+        padding: 20px;
+    }
+    .popup button {
+        background-color: aqua;
+        color: black;
+        padding: 5px 20px;
+        border-radius: 10px;
+    }
+
+    .popup button:hover {
+        cursor: pointer;
+        border: 2px solid #ff0000 ;
+        font-weight: 800;
+    }
+
+    .popup button:active {
+        border-color: #3b08f6;
+        background-color: white;
+        color: red;
+        font-weight: 600;
+    }
+
+    #show {
+        display: flex;
+    }
+
+    #hide {
+        display: none;
+    }

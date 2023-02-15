@@ -1,0 +1,128 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+    font-family: 'IBM Plex Sans', sans-serif;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    background-color: #f0f4f5;
+}
+
+header {
+padding: 40px 170px;
+display: flex;
+align-items: center;
+}
+
+.logo-holder {
+width: 50%;
+}
+
+.logo{
+height: 33px;
+width: 105px;
+}
+
+.logo img{
+width: 100%;
+height: 100%;
+}
+
+.Navbar {
+width: 50%;
+display: flex;
+justify-content: end;
+}
+
+nav ul {
+display: flex;
+align-items: center;
+gap: 40px;
+padding-right: 10px;
+}
+
+a{
+text-decoration: none;
+}
+
+li{
+list-style: none;
+color: black;
+font-size: 12px;
+font-weight: bolder;
+}
+
+li:hover {
+    color: #179e68;
+    font-size: 15px;
+}
+
+li:active {
+    color: #ff00d0;
+    text-decoration: underline;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 90vh;
+    text-align: center;
+}
+
+main h1 {
+    color: #20b479;
+    margin: 10px 0px;
+}
+
+.info h1 {
+        font-size: 23px;
+        font-weight: 900;
+}
+
+.info p {
+    font-size: 12.5px;
+    font-weight: 550;
+}
+
+main .info {
+    width: 40%;
+    margin-top: 45px;
+}
+
+main .meta-info {
+    display: flex;
+    text-align: center;
+    gap: 32px;
+}
+
+.meta-info {
+    margin-top: 25px;
+    padding: 10px;
+}
+
+.meta-info div {
+    width: 143px;
+    border-radius: 0.7rem;
+    box-shadow: 0 0 10px black;
+}
+
+.meta-info div h1 {
+        font-size: 18px;
+        font-weight: 900;
+        margin-bottom: 0;
+        margin-top: 14px;
+}
+
+.meta-info div h2 {
+        font-size: 14px; 
+        margin-bottom: 14px;   
+}
+

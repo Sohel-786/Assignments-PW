@@ -1,0 +1,191 @@
+*{
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        overflow: hidden;
+        font-family: 'IBM Plex Sans', sans-serif;
+}
+
+body {
+        height: 100vh;
+        width: 100vw;
+        display: flex;
+        flex-direction: column;
+        background-color: #f0f4f5;
+  
+}
+
+header {
+    padding: 40px 170px;
+    display: flex;
+    align-items: center;
+}
+
+.logo-holder {
+    width: 50%;
+}
+
+.logo{
+    height: 33px;
+    width: 105px;
+}
+
+.logo img{
+    width: 100%;
+    height: 100%;
+}
+
+.Navbar {
+    width: 50%;
+    display: flex;
+    justify-content: end;
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    padding-right: 10px;
+}
+
+a{
+    text-decoration: none;
+}
+
+li{
+    list-style: none;
+    color: black;
+    font-size: 12px;
+    font-weight: bolder;
+}
+
+
+main {
+    display: flex;
+}
+
+.first {
+        padding: 20px 0px 20px 170px;
+        margin-top: 70px;
+        width: 53%;
+}
+
+.first h1 {
+    font-size: 45px;
+}
+
+p{
+    font-size: 11.5px;
+    font-weight: 550;
+    color: #7c7c7c;
+    margin: 20px 0;
+}
+
+.scope {
+        position: absolute;
+        width: 35%;
+        top: 150px;  
+        left: 323px;
+        height: 71%;      
+        z-index: -1;
+}
+.scope img {
+    width: 100%;
+    height: 100%;
+}
+
+button {
+    color: white;
+    border: 2px solid transparent;
+    padding: 12px 28px;
+    border-radius: 40px;
+    background-color: #20bc7e;
+    font-size: 17px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.inline-img {
+    display: inline-block;
+    position:relative;
+    top: 11px;
+    right: -186px;
+    height: 47px;
+    width: 60px;
+}
+
+.angle {
+    height: 18px;
+    margin: 5px 0;
+}
+
+.angle img {
+    height: 100%;
+}
+
+.angle2 {
+    height: 18px;
+}
+
+.angle2 img {
+    height: 100%;
+}
+
+.mouse {
+    height: 21px;
+    margin-top: 3px;
+    display: flex;
+    justify-content: end;
+}
+
+.mouse img {
+    height: 100%;
+}
+
+
+.GreenBox, .OrangeBox, .doctor {
+    position: absolute;
+    right: 0;
+
+}
+.GreenBox {
+    width: 31.5%;
+    bottom: 16px;
+}
+
+.OrangeBox {
+   width: 27%;
+   bottom: 25.5px;
+}
+
+.doctor {
+    height: 88%;
+    bottom: 0;
+}
+
+.second div img {
+    width: 100%;
+    height: 100%;
+}
+
+li:hover {
+    color: #179e68;
+    font-size: 15px;
+}
+
+li:active {
+    color: #ff00d0;
+    text-decoration: underline;
+}
+
+button:hover {
+        background-color: white;
+        color:  #20bc7e;
+        border: 2px solid #20bc7e;
+}
+
+button:active {
+    background-color: #ece9e9;
+    font-size: 17.3px;
+    color: #1f8c0e;
+}

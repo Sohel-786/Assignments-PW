@@ -1,0 +1,144 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+    font-family: 'IBM Plex Sans', sans-serif;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    background-color: #f0f4f5;
+}
+
+header {
+padding: 40px 170px;
+display: flex;
+align-items: center;
+}
+
+.logo-holder {
+width: 50%;
+}
+
+.logo{
+height: 33px;
+width: 105px;
+}
+
+.logo img{
+width: 100%;
+height: 100%;
+}
+
+.Navbar {
+width: 50%;
+display: flex;
+justify-content: end;
+}
+
+nav ul {
+display: flex;
+align-items: center;
+gap: 40px;
+padding-right: 10px;
+}
+
+a{
+text-decoration: none;
+}
+
+li{
+list-style: none;
+color: black;
+font-size: 12px;
+font-weight: bolder;
+}
+
+li:hover {
+    color: #179e68;
+    font-size: 15px;
+}
+
+li:active {
+    color: #ff00d0;
+    text-decoration: underline;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    height: 90vh;
+    align-items: center;    
+    justify-content: center;
+}
+
+.form {
+    padding: 15px 15px 10px 15px;
+    box-shadow: 0 0 10px black;
+    width: 22%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 10px;
+    margin-top: 50px;
+}
+
+.form h1 {
+    font-size: 21px;
+    font-weight: 900;
+}
+
+form {
+    width: 100%;
+    margin-top: 10px;
+    font-weight: bold;
+    font-size: 13.5px;
+}
+
+input {
+    width: 100%;
+    margin: 4px 0px 10px 0px;
+    padding: 4px 7px;
+    border: none;
+    border-radius: 10px;
+    font-weight: 550;
+    font-size: 11px;
+
+}
+
+input[type=submit] {
+    border: transparent;
+    border-radius: 10px;
+    background: #20BC7E;
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 7px;
+    cursor: pointer;
+}
+
+input[id=message] {
+    padding-bottom: 50px;
+}
+
+textarea {
+    width: 100%;
+    height: 70px;
+    margin: 4px 0px 5px 0px;
+    padding: 4px 7px;
+    border: none;
+    border-radius: 10px;
+    font-weight: 550;
+    font-size: 11px;
+    resize: none;
+}
+
+.aler::placeholder{
+        
+        color: red;
+        font-weight: 500;
+}
