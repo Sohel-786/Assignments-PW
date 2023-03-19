@@ -9,10 +9,14 @@ let person = {
 };
 
 function meta(obj){
-    let Obj = {
-        Name : obj.name,
-        Street : obj.address.street
-    }
+    // let Obj = {
+    //     Name : obj.name,
+    //     Street : obj.address.street
+    // }
+    // return Obj;
+
+    let {name,street} = {name :obj.name, street: obj.address.street}
+    let Obj = {name,street};
     return Obj;
 }
 

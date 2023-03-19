@@ -8,3 +8,5 @@ let y = 10;
 [x,y] = swap(x,y);
 
 console.log(x,y);
+
+
