@@ -1,7 +1,10 @@
 function swap(...values){
-    
-    let [y,x] = values;
-    return [x,y];
+    return values.reverse();
 }
 
-console.log(swap(5,10));
+let x = 5;
+let y = 10;
+
+[x,y] = swap(x,y);
+
+console.log(x,y);
