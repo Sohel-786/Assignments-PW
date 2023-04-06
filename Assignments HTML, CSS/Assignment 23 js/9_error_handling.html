@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Error Handling</title>
+</head>
+<body>
+     <h1>Error Handling</h1>
+</body>
+</html>
+
+<script>
+    async function handle_error(){
+        try{
+            let res = await fetch('https://jsonplaceholder.typicode.com/posts/123456789');
+            if(!res.ok){
+                throw Error('Network response was not ok')
+            }
+            return res.json();
+        }catch(err){
+            console.log(err);
+        }
+    }
+
+ handle_error();
+</script>
