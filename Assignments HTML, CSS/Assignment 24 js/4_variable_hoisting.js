@@ -1,6 +1,6 @@
 try{
     console.log(three);         // undefined - concept of hoisting
-    console.log(two);       // initialization error
+    console.log(two);       // initialization error -- TDZ
     console.log(one);
     let one = 1;
     const two = 2;
