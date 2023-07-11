@@ -36,4 +36,9 @@ fs.open('../01/nodejs_architecture.txt', 'a', (err,fd)=>{
 })
 
 
+// deleting the file
 
+fs.unlink('../01/nodejs_architecture.txt', (err) =>{
+    if(err) throw err;
+    console.log('File Deleted Successfully');
+})
