@@ -10,14 +10,14 @@ fs.open('nodejs_architecture.txt', 'a', (err,fd)=>{
 
     // fs.open() will create and open a new empty file if the defined file doesn't exists
 
-    fs.write(fd,string,0,'utf-8', (err, bytes) =>{
-        if(err) throw err;
+    fs.write(fd,string,0,'utf-8', (err1, bytes) =>{
+        if(err1) throw err1;
 
         console.log('File Successfully Created', '\n', bytes, 'Added to the File');
     })
 
     // this will close the file
-    fs.close(fd, (err)=>{
-        if(err) throw err;
+    fs.close(fd, (err2)=>{
+        if(err2) throw err2;
     })
 })
