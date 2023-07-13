@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 const http = require('http');
 
 const connect = ()=>{
-    return mongoose.connect('mongodb://127.0.0.1:27017/products');
+    return mongoose.connect('mongodb+srv://ss1036425:Ugd6dMQIgQVhVNPY@products.v1gygmp.mongodb.net/products?retryWrites=true&w=majority');
 }
 
 const productSchema = mongoose.Schema({
