@@ -6,10 +6,9 @@ exports.register = async (req, res) =>{
 
 
         if(!name || !email || !password){
-
             return res.status(400).json({   
                 Success : false,
-                Error: 'Name, Email, and Password are required'
+                Error: 'all input fields are required'
             })
         }
 
@@ -36,31 +35,35 @@ exports.register = async (req, res) =>{
 exports.login = async (req, res) =>{
     try {
 
-        const {email,pass} = req.body;
+        const {email,password} = req.body;
 
-        if(!email || !pass){
-            throw new Error('Please enter vaild data');
+        if(!email || !password){
+            return res.status(400).json({   
+                Success : false,
+                Error: 'all input fields are required'
+            })
         }
 
         const userExists = await User.findOne({email}); 
         
         if(!userExists){
             return res.status(400).json({
-                msg: 'No User Found'
+                msg: 'No account associated with this email'
             })
         }
 
-        if(userExists.password == pass){
+        if(userExists.password == password){
             return res.status(200).json({
                 msg: 'User Login Successfully'
             });
         }else{
             return res.status(400).json({
-                msg: 'Check your password and try again'
+                msg: 'Password is wrong'
             }); 
         }
 
     } catch (err) {
         console.log(err);
+        res.status(500).send(err.message)
     }
 }
