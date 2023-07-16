@@ -6,13 +6,20 @@ exports.register = async (req, res) =>{
 
 
         if(!name || !email || !password){
-            return res.send('Name, Email, and Password are required');
+
+            return res.status(400).json({   
+                Success : false,
+                Error: 'Name, Email, and Password are required'
+            })
         }
 
         const userExists = await User.findOne({email}); 
         
         if(userExists){
-            throw new Error('User already exists')
+            return res.status(400).json({
+                Success : false,
+                Error: 'User already exists'
+            })
         }
 
         const user = await User.create(req.body);
@@ -22,6 +29,7 @@ exports.register = async (req, res) =>{
 
     } catch (err) {
         console.log(err);
+        res.status(500).send(err.message)
     }
 }
 
