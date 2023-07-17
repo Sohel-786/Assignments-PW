@@ -2,15 +2,7 @@ const User = require('../models/user.model');
 
 exports.register = async (req, res) =>{
     try {
-        const {name,email,password} = req.body;
-
-
-        if(!name || !email || !password){
-            return res.status(400).json({   
-                Success : false,
-                Error: 'all input fields are required'
-            })
-        }
+        const {email} = req.body;
 
         const userExists = await User.findOne({email}); 
         
@@ -36,13 +28,6 @@ exports.login = async (req, res) =>{
     try {
 
         const {email,password} = req.body;
-
-        if(!email || !password){
-            return res.status(400).json({   
-                Success : false,
-                Error: 'all input fields are required'
-            })
-        }
 
         const userExists = await User.findOne({email}); 
         
