@@ -28,7 +28,7 @@
   * **Code:** 404 Bad Request <br />
     **Content:** `{ "msg" : "all input fields are required" }`
 
-**----**
+----
 
 **Login**
 ----
