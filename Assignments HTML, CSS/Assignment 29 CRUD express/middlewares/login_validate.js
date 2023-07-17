@@ -4,6 +4,6 @@ exports.login_validate = (req,res,next) =>{
     if(req.body && email && password){
         next()
     }else{
-        res.status(404).send({msg:"All input fields are required"})
+        res.status(400).send({msg:"All input fields are required"})
     }
 }

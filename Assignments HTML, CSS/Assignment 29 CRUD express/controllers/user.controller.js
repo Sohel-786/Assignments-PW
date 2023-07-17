@@ -32,7 +32,7 @@ exports.login = async (req, res) =>{
         const userExists = await User.findOne({email}); 
         
         if(!userExists){
-            return res.status(400).json({
+            return res.status(404).json({
                 msg: 'No account associated with this email'
             })
         }
