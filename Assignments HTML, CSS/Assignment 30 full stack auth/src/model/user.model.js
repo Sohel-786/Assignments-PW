@@ -1,4 +1,5 @@
 const mongoose = require('mongoose');
+const JWT = require('jsonwebtoken');
 
 const userSchema = new mongoose.Schema({
 
@@ -37,6 +38,20 @@ const userSchema = new mongoose.Schema({
         type: String,
         trim: true
     },
+}, {
+    versionKey: false,
+    timestamps : true
 })
+
+
+userSchema.methods = {
+    jwtToken() {
+        return JWT.sign(
+            {id: this._id, email: this.email},
+            process.env.SECRET,
+            {expiresIn: '24h'}
+        )
+    }
+}
 
 module.exports = mongoose.model('user', userSchema);
