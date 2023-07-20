@@ -3,8 +3,10 @@ const express = require('express');
 const app = express();
 const path = require('path');
 const connect  = require('./config/db');
+const cookieParser = require('cookie-parser');
 
 app.use(express.json());
+app.use(cookieParser());
 app.use(express.urlencoded({extended:false}));
 app.use('/static', express.static(path.join(__dirname, 'public')));
 
