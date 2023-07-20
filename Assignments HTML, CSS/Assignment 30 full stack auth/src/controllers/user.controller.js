@@ -39,7 +39,7 @@ exports.login = async (req, res) => {
             const {email, password} = req.body;
             var user  = await User.findOne({email}).select('+password')
 
-            if(!user ||  await bcrypt.compare( password , user.password)){
+            if(!user ||  !(await bcrypt.compare( password , user.password))){
                 return res.status(400).json({
                     success: false,
                     msg : 'Invalid Credentails'
@@ -81,5 +81,22 @@ exports.getUser = async (req, res) =>{
 
     } catch (err) {
         return res.status(400).send(err.message);
+    }
+}
+
+exports.logout = async(req, res) =>{
+
+    try{
+            const cookieOptions = {
+                expiry
+                httpOnly: true
+            }
+            res.cookie('token', null, cookieOptions)
+
+    }catch(err){
+        return res.status(400).json({
+            success: false,
+            msg: err.message
+        })
     }
 }

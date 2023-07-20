@@ -14,5 +14,6 @@ const {authenticateUser} = require('../middlewares/authenticateUser');
 router.post('/signup', signupDataValidate, signup);
 router.post('/login', loginDatavalidate, login);
 router.get('/', authenticateUser, getUser);
+router.get('/logout', authenticateUser, logout);
 
 module.exports = router;
