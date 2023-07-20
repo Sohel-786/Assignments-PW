@@ -88,10 +88,14 @@ exports.logout = async(req, res) =>{
 
     try{
             const cookieOptions = {
-                expiry
+                expires: new Date(),
                 httpOnly: true
             }
             res.cookie('token', null, cookieOptions)
+            res.status(200).json({
+                success: true,
+                msg:'Logged Out'
+            })
 
     }catch(err){
         return res.status(400).json({
