@@ -15,7 +15,7 @@ exports.signup = async (req, res) => {
 
             const userinfo = User(req.body);
             const user = await userinfo.save();
-            return res.status(200).render('login_page')
+            return res.redirect('/Login');
 
     } catch (err) {
         
@@ -68,10 +68,7 @@ exports.login = async (req, res) => {
 
             res.cookie("token", token, cookieOptions);
 
-            return res.status(200).json({
-                success: true,
-                data:  user
-            })
+            return res.redirect('/');
 
     } catch (err) {
 
@@ -103,7 +100,7 @@ exports.logout = async(req, res) =>{
                 httpOnly: true
             }
             res.cookie('token', null, cookieOptions)
-            res.status(200).render('signup_page');
+            return res.redirect('/Login');
 
     }catch(err){
         return res.status(400).json({
@@ -114,10 +111,19 @@ exports.logout = async(req, res) =>{
 }
 
 
-
 exports.SignUp = async (req, res) =>{
 
     try {
+
+        //if User is not Logged In and haven't logged Out then it will not let user to Open SignUp Page
+        
+        const token  = (req.cookies && req.cookies.token) || null;
+
+        if(token){
+
+            return res.redirect('/');
+
+        }
 
         return res.status(200).render('signup_page');
 
@@ -129,6 +135,15 @@ exports.SignUp = async (req, res) =>{
 exports.Login = async (req, res) =>{
 
     try {
+
+        //if User is not Logged In and haven't logged Out then it will not let user to Open Login Page
+
+        const token  = (req.cookies && req.cookies.token) || null;
+
+        if(token){
+            
+                return res.redirect('/');
+        }
 
         return res.status(200).render('login_page');
 

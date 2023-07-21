@@ -5,13 +5,14 @@ exports.authenticateUser = (req, res, next) =>{
     // inject user info in req
 
     const token  = (req.cookies && req.cookies.token) || null;
-    console.log(token);
 
     if(!token){
-        return res.status(400).json({
-            success : false,
-            msg : 'Not Authorized'
-        })
+        // return res.status(400).json({
+        //     success : false,
+        //     msg : 'Not Authorized'
+        // })
+
+        return res.redirect('/Login');
     }
     try {
         const payload = JWT.verify(token, process.env.SECRET);
