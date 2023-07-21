@@ -15,10 +15,7 @@ exports.signup = async (req, res) => {
 
             const userinfo = User(req.body);
             const user = await userinfo.save();
-            return res.status(201).json({
-                success: true,
-                data:  user
-            })
+            return res.status(200).render('login_page')
 
     } catch (err) {
         
@@ -36,14 +33,29 @@ exports.signup = async (req, res) => {
 
 exports.login = async (req, res) => {
     try{
-            const {email, password} = req.body;
-            var user  = await User.findOne({email}).select('+password')
+            const {username, password} = req.body;
+            var user  = await User.findOne({username}).select('+password')
 
-            if(!user ||  !(await bcrypt.compare( password , user.password))){
-                return res.status(400).json({
-                    success: false,
-                    msg : 'Invalid Credentails'
-                })
+            if(!user){
+
+                user = await User.findOne({email:username}).select('+password');
+
+                if(!user ||  !(await bcrypt.compare( password , user.password))) {
+
+                    return res.status(400).json({
+                        success: false,
+                        msg : 'Invalid Credentails'
+                    })
+                }
+            }
+            else if( !(await bcrypt.compare( password , user.password))){
+
+
+                    return res.status(400).json({
+                        success: false,
+                        msg : 'Invalid Credentails'
+                    })
+                
             }
 
             user.password = undefined;
@@ -92,10 +104,7 @@ exports.logout = async(req, res) =>{
                 httpOnly: true
             }
             res.cookie('token', null, cookieOptions)
-            res.status(200).json({
-                success: true,
-                msg:'Logged Out'
-            })
+            res.status(200).render('signup_page');
 
     }catch(err){
         return res.status(400).json({

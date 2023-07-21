@@ -13,16 +13,16 @@
             <form action="/signup" method="POST">
 
                 <label for="name">Name</label>
-                <input type="text" id="name" name="name" placeholder="Enter your name"><br>
+                <input type="text" id="name" name="name" placeholder="Enter your name" required><br>
 
                 <label for="username">Username</label>
-                <input type="text" id="username" name="username" placeholder="Enter your Username"><br>
+                <input type="text" id="username" name="username" placeholder="Enter your Username" required><br>
 
                 <label for="email">Email</label>
-                <input type="email" id="email" name="email" placeholder="Enter your name"><br>
+                <input type="email" id="email" name="email" placeholder="Enter your name" required><br>
 
                 <label for="password">Password</label>
-                <input type="password" id="password" name="password" placeholder="Enter your Password"><br>
+                <input type="password" id="password" name="password" placeholder="Enter your Password" required><br>
                 
                 <label for="bio">Bio</label>
                 <input type="text" id="bio" name="bio" placeholder="Enter your Bio"><br>
@@ -31,7 +31,10 @@
             </form>
 
             <div>
-                <p><span>Forgot Password?</span> <span>Log In</span></p>
+                <p>
+                    <span><a href="#">Already Have an account?</a></span>
+                    <span><a href="/Login">Log In</a></span>
+                </p>
             </div>
         </section>
 </body>

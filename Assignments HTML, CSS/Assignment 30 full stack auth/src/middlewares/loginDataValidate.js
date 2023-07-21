@@ -1,8 +1,11 @@
+// it will not be needed but i created because it was asked in assignment
+
+
 exports.loginDatavalidate = (req, res, next) => {
 
-    const {email, password} = req.body;
+    const {username, password} = req.body;
 
-    if(email && password && req.body){
+    if(username && password && req.body){
         next();
     }
     else{
