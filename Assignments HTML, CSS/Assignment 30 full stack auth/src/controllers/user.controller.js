@@ -86,10 +86,9 @@ exports.getUser = async (req, res) =>{
     try {
 
         const user = await User.findById(userId);
-        return res.status(200).json({
-            success : true,
-            User : user
-        })
+        return res.status(200).render('user_page',{
+             user
+        });
 
     } catch (err) {
         return res.status(400).send(err.message);

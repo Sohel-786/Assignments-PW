@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>User Page</title>
+  <link rel="stylesheet" href="/static/userpage.css">
+</head>
+<body>
+    <div>
+        <button class="button-45">Log Out</button>
+    </div>
+
+  <div class="container">
+    <img src="https://images6.alphacoders.com/132/1321656.png" alt="Profile Image" class="profile-image">
+    <h2 id="userName" class="username"><%= user.username %></h2>
+    <p id="userBio" class="bio"><%= user.bio %></p>
+    <p id="userEmail" class="follower-count"><%= user.email %></p>
+    <p  class="follower-count">Followers: 1000</p>
+  </div>
+</body> 
+
+<script>
+    let arr = [
+        'https://images6.alphacoders.com/132/1321656.png',
+
+        'https://platform-production-assets-us-west-2.s3.amazonaws.com/uploads/hw/2020/07/5880cf9440c24ef131c080521cdda868.jpg',
+
+        'https://i.pinimg.com/236x/46/c2/0e/46c20e9d442bb34d979b0a4d2159e0ab.jpg',
+
+        'https://wallpapercg.com/media/ts_orig/12093.webp',
+
+        'https://img.wattpad.com/cover/297574871-256-k627834.jpg'
+    ]
+</script>
