@@ -10,11 +10,17 @@
     </div>
 
   <div class="container">
-    <img src="https://images6.alphacoders.com/132/1321656.png" alt="Profile Image" class="profile-image">
+
+    <img src="https://images6.alphacoders.com/132/1321656.png" alt="Profile Image" class="profile-image" id="profile_img">
+
     <h2 id="userName" class="username"><%= user.username %></h2>
+
     <p id="userBio" class="bio"><%= user.bio %></p>
+
     <p id="userEmail" class="follower-count"><%= user.email %></p>
+
     <p  class="follower-count">Followers: 1000</p>
+
   </div>
 </body> 
 
@@ -29,5 +35,10 @@
         'https://wallpapercg.com/media/ts_orig/12093.webp',
 
         'https://img.wattpad.com/cover/297574871-256-k627834.jpg'
-    ]
+    ];
+    
+    var num = Math.floor(Math.random() * 5);
+
+    document.getElementById('profile_img').src = arr[num];
+
 </script>
