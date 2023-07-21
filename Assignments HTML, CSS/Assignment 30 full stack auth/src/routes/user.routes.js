@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 
-const {signup, login, getUser,logout} = require('../controllers/user.controller');
+const {signup, login, getUser,logout, SignUp, Login} = require('../controllers/user.controller');
 
 
 // middlewares
@@ -15,5 +15,8 @@ router.post('/signup', signupDataValidate, signup);
 router.post('/login', loginDatavalidate, login);
 router.get('/', authenticateUser, getUser);
 router.get('/logout', authenticateUser, logout);
+
+router.get('/SignUp', SignUp);
+router.get('/Login', Login);
 
 module.exports = router;

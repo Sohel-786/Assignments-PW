@@ -104,3 +104,27 @@ exports.logout = async(req, res) =>{
         })
     }
 }
+
+
+
+exports.SignUp = async (req, res) =>{
+
+    try {
+
+        return res.status(200).render('signup_page');
+
+    } catch (e) {
+        return res.status(400).send(err.message);
+    }
+}
+
+exports.Login = async (req, res) =>{
+
+    try {
+
+        return res.status(200).render('login_page');
+
+    } catch (e) {
+        return res.status(400).send(err.message);
+    }
+}

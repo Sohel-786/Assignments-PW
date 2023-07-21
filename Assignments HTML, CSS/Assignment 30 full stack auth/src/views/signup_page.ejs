@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/signup.style.css">
+    <title>Sign Up</title>
+</head>
+<body>
+        <section>
+
+            <h1>Instagram SignUp</h1>
+            <form action="/signup" method="POST">
+
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" placeholder="Enter your name"><br>
+
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" placeholder="Enter your Username"><br>
+
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="Enter your name"><br>
+
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" placeholder="Enter your Password"><br>
+                
+                <label for="bio">Bio</label>
+                <input type="text" id="bio" name="bio" placeholder="Enter your Bio"><br>
+
+                <button type="submit">Sign Up</button>
+            </form>
+
+            <div>
+                <p><span>Forgot Password?</span> <span>Log In</span></p>
+            </div>
+        </section>
+</body>
+</html>
