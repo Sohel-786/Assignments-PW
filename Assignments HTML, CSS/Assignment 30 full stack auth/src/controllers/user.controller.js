@@ -88,7 +88,10 @@ exports.getUser = async (req, res) =>{
         });
 
     } catch (err) {
-        return res.status(400).send(err.message);
+        return res.status(400).json({
+            success : false,
+            msg : err.message
+        });
     }
 }
 
