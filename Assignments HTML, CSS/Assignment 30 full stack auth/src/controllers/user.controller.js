@@ -15,7 +15,7 @@ exports.signup = async (req, res) => {
 
             const userinfo = User(req.body);
             const user = await userinfo.save();
-            return res.redirect('/Login');
+            return res.status(200).redirect('/Login');
 
     } catch (err) {
         
@@ -68,7 +68,7 @@ exports.login = async (req, res) => {
 
             res.cookie("token", token, cookieOptions);
 
-            return res.redirect('/');
+            return res.status(200).redirect('/');
 
     } catch (err) {
 
