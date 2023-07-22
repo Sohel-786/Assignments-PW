@@ -53,7 +53,7 @@ exports.login = async (req, res) => {
 
                     return res.status(400).json({
                         success: false,
-                        msg : 'Invalid Credentails'
+                        msg : 'Password is Wrong'
                     })
                 
             }

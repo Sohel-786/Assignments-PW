@@ -14,14 +14,16 @@
   /SignUp
 
 * **Method:**
-   * On submit it will take action on `/signup`
+
+   * On submit it will take action on `/signup` route
        & 
    * method :  `POST`
+
 * **Payload:**
   
   {"name" : "fullname_of_user", "username" : "username", "email": "user_email", "password":"user_password", "bio" : "bio_of_user"}
 
-    * all are mandatory except `bio` - it's optional
+    * ALl fields are mandatory except `bio` - it's optional
 
 * **Success Response:**
 
@@ -43,6 +45,10 @@
   * **Code:** 400 Bad Request <br />
     **Content:** `{ "msg" : "All input fields are required" }`
 
+* **Note:**
+    
+  * If you are already logged in and haven't logged Out yet then it will not show you the SignUp page even if you hit the `/SignUp` route
+
 ----
 
 **Login**
@@ -51,31 +57,38 @@
 
 * **URL**
 
-  /login
+  /Login
 
 * **Method:**
 
-  `POST`
+   * On submit it will take action on `/login` route
+       & 
+   * method :  `POST`
+
 * **Payload:**
   
-  {"email": "user_email", "password":"user_password"}
+  {"username": "username OR user_email", "password":"user_password"}
 
 * **Success Response:**
 
   * **Code:** 200 <br />
-    **Content:** `{ "msg" : "User Login Successfully" }`
+    **Content:** it will redirect to `User_page` through `res.redirect('\')` 
 
 * **Error Response:**
 
-  * **Code:** 404 Not Found <br />
-    **Content:** `{ "msg" : "No account associated with this email" }`
+  * **Code:** 400 Bad Request <br />
+    **Content:** `{ success : false , "msg" : 'Invalid Credentails' }`
 
   OR
 
   * **Code:** 400 Bad Request <br />
-    **Content:** `{ "msg" : "all input fields are required" }`
+    **Content:** `{ "msg" : "All input fields are required" }`
 
   OR
 
   * **Code:** 400 Bad Request <br />
-    **Content:** `{ "msg" : "Password is wrong" }`
+    **Content:** `{ success : false , "msg" : 'Password is Wrong' }`
+
+* **Note:**
+
+  * If you are already logged in and haven't logged Out yet then it will not show you the   Login page even if you hit the `/Login` route
