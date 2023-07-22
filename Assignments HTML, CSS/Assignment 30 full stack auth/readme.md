@@ -19,22 +19,27 @@
   
   {"name" : "fullname_of_user", "username" : "username", "email": "user_email", "password":"user_password", "bio" : "bio_of_user"}
 
-    * all are mandatory except bio - it's optional
+    * all are mandatory except `bio` - it's optional
 
 * **Success Response:**
 
   * **Code:** 200 <br />
-    **Content:** it will redirect to Login Page 
+    **Content:** it will redirect to `Login` Page `res.redirect('\Login')`
 
 * **Error Response:**
 
   * **Code:** 400 Bad Request <br />
-    **Content:** `{ Error : "User already exists" }`
+    **Content:** `{ success: false , "msg" : "Account already exists" }`
 
   OR
 
-  * **Code:** 404 Bad Request <br />
-    **Content:** `{ "msg" : "all input fields are required" }`
+  * **Code:** 400 Bad Request <br />
+    **Content:** `{ success : false, "msg" : 'Please provide valid email' }`
+
+  OR
+
+  * **Code:** 400 Bad Request <br />
+    **Content:** `{ "msg" : "All input fields are required" }`
 
 ----
 
