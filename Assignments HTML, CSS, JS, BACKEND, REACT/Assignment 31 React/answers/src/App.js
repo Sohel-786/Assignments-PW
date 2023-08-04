@@ -10,7 +10,7 @@ function App() {
 
       <Button  text={"Click Me"} onClick={()=>{ console.log('Thanks for clicking me');}}/>
 
-      <Header title={'This is First Assignment of React'} />
+      <Header title={'"PW Skills" and all our Mentors are Amazing'} />
 
       <List  items={['Harry Potter', 'Hobbit', 'Alpha', 'RoundUp']}/>
 
