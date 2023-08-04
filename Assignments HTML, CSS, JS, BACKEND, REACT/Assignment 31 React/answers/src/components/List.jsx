@@ -2,7 +2,7 @@ const List = ({items}) => {
     return(
         <>
             <ul> {items.map( (el) => (
-                <li>{el}</li>
+                <li key={el}>{el}</li>
             ))} </ul>
         </>
     )

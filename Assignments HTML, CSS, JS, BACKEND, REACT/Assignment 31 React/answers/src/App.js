@@ -12,7 +12,7 @@ function App() {
 
       <Header title={'This is First Assignment of React'} />
 
-
+      <List  items={['Harry Potter', 'Hobbit', 'Alpha', 'RoundUp']}/>
 
     </div>
   );
