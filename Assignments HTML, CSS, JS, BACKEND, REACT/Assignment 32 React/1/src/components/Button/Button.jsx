@@ -1,6 +1,6 @@
 function Button({text}){
     return (
-        <button className="">{text}</button>
+        <input type='submit' value={text} />
     )
 }
 
