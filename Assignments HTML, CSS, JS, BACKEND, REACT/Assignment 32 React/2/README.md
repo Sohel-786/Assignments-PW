@@ -2,4 +2,4 @@
 
 # Home Page
 
-![Home](src/assets/basic.png)
+![Home](../1/src/assets/basic.png)

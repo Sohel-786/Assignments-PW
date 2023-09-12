@@ -2,8 +2,10 @@
 
 # Login Page
 
-![Login](src/assets/Login Page.png)
+![Login](./src/assets/LoginPage.png)
 
 # SignUp Page
 
-![SignUp](src/assets/SignUp Page.png)
+1\src\assets\instagram.png
+
+![SignUp](./src/assets/SignUpPage.png)
