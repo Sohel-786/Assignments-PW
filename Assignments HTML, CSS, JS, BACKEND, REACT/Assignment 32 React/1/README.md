@@ -6,6 +6,4 @@
 
 # SignUp Page
 
-1\src\assets\instagram.png
-
 ![SignUp](./src/assets/SignUpPage.png)
